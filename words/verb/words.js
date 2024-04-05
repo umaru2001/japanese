@@ -67,7 +67,7 @@ const changeHeimuStatus = (key) => {
 };
 
 const fetchAndRenderTable = (name) => {
-  const jsonName = `('./words_${name}.json`;
+  const jsonName = `./words_${name}.json`;
   fetch(jsonName)
     .then(response => response.json())
     .then(data => {
