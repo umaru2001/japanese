@@ -1,0 +1,20 @@
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.flex-row-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flex-row-box * {
+  margin-right: 4px;
+}
