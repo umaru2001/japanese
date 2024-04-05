@@ -15,8 +15,8 @@ kuroshiro?.init(new KuromojiAnalyzer({
   dictPath: "dict/"
 }));
 
-const process = () => {
-  fetchAndRenderTable();
+const process = (name) => {
+  fetchAndRenderTable(name);
 };
 
 const toggleTestMode = () => {
@@ -66,8 +66,9 @@ const changeHeimuStatus = (key) => {
   }
 };
 
-const fetchAndRenderTable = () => {
-  fetch('./words.json')
+const fetchAndRenderTable = (name) => {
+  const jsonName = `('./words_${name}.json`;
+  fetch(jsonName)
     .then(response => response.json())
     .then(data => {
       const body = document.querySelector('.japanese-words');
@@ -146,5 +147,3 @@ const fetchAndRenderTable = () => {
       console.error('读取 JSON 文件时发生错误:', error);
     });
 };
-
-process();
