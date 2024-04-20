@@ -80,7 +80,7 @@ const hideALine = (event, name) => {
 const kuroshiro = new Kuroshiro();
 // 初始化 kuroshiro-analyzer-kuromoji
 kuroshiro?.init(new KuromojiAnalyzer({
-  dictPath: "../../../../japanese/words/verb/dict/"
+  dictPath: "./dict/"
 }));
 
 const process = (name) => {
@@ -152,7 +152,7 @@ const changeHeimuStatus = (key) => {
 };
 
 const fetchAndRenderTable = (name) => {
-  const jsonName = `https://pengdonglai.com/japanese/words/verb/words_${name}.json`;
+  const jsonName = `https://japanese-beta.vercel.app/words/verb/words_${name}.json`;
   fetch(jsonName)
     .then(response => response.json())
     .then(data => {
