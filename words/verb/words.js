@@ -80,7 +80,7 @@ const hideALine = (event, name) => {
 const kuroshiro = new Kuroshiro();
 // 初始化 kuroshiro-analyzer-kuromoji
 kuroshiro?.init(new KuromojiAnalyzer({
-  dictPath: "https://japanese-beta.vercel.app/words/verb/dict/"
+  dictPath: "./dict/"
 }));
 
 const process = (name) => {
